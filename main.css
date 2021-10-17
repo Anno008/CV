@@ -73,30 +73,6 @@ h2 {
   margin: 10px 10px;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.flex-gap-10 {
-  gap: 10px;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
 .moon, .sun{
   display: none;
   margin: auto auto;
