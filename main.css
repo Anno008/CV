@@ -1,8 +1,9 @@
 :root {
-  --primaryBackgroundColor: #808080;
+  --primaryBackgroundColor: #D3D3D3;
   --secondaryBackgroundColor: #faf9f8;
   --primaryTextColor: #140306;
   --secondaryTextColor: #303030;
+  --shadowColor: #222222;
 }
 
 html,
@@ -17,6 +18,7 @@ body {
   --secondaryBackgroundColor: #242526;
   --primaryTextColor: #fff;
   --secondaryTextColor: #686868;
+  --shadowColor: gray;
 }
 
 *::-webkit-scrollbar {
@@ -62,6 +64,7 @@ h2 {
 }
 
 .container {
+  box-shadow: 0 0px 4px 1px var(--shadowColor);
   width: 70%;
   margin: auto auto;
   background-color: var(--secondaryBackgroundColor);
@@ -74,12 +77,12 @@ h2 {
   margin: 10px 10px;
 }
 
-.moon, .sun{
+.moon,
+.sun {
   display: none;
   margin: auto auto;
   user-select: none;
 }
-
 
 .themeSwitch {
   margin: 12px;
@@ -105,10 +108,8 @@ h2 {
 }
 
 .themeSwitch:hover {
-    transform: scale(1.2) rotate(360deg);
-    
+  transform: scale(1.2) rotate(360deg);
 }
-
 
 @media only screen and (max-width: 1024px) {
   .container {
