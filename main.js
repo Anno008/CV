@@ -18,9 +18,5 @@ const setTheme = (isDarkTheme) => {
   }
 };
 
-const toggleTheme = () => {
-  setTheme(isDark());
-};
-
-themeSwitchButton.onclick = toggleTheme;
+themeSwitchButton.onclick = () => setTheme(isDark());;
 setTheme(true);

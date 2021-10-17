@@ -24,13 +24,13 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--primaryBackgroundColor);
+  background: var(--secondaryTextColor);
 }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  border: 3px solid var(--primaryBackgroundColor);
-  background: var(--secondaryTextColor);
+  border-radius: 10px;
+  border: 3px solid var(--secondaryTextColor);
+  background: var(--primaryBackgroundColor);
 }
 
 *::-webkit-scrollbar-thumb:hover {
@@ -48,6 +48,7 @@ ul > li {
 ul {
   margin-block-start: 4px;
   margin-block-end: 4px;
+  padding-inline-start: 30px;
 }
 
 h1 {
@@ -102,7 +103,8 @@ h2 {
 }
 
 .themeSwitch:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(360deg);
+    
 }
 
 
