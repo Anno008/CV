@@ -7,7 +7,7 @@ const isDark = () => document.getElementsByClassName("dark").length > 0;
 const setTheme = (isDarkTheme) => {
   const body = document.body;
 
-  if (!isDarkTheme) {
+  if (isDarkTheme) {
     body.classList.add("dark");
     lightSvg.style.display = "block";
     darkSvg.style.display = "none";
@@ -18,5 +18,5 @@ const setTheme = (isDarkTheme) => {
   }
 };
 
-themeSwitchButton.onclick = () => setTheme(isDark());;
-setTheme(true);
+themeSwitchButton.onclick = () => setTheme(!isDark());;
+setTheme(false);
