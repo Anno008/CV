@@ -18,5 +18,8 @@ const setTheme = (isDarkTheme) => {
   }
 };
 
-themeSwitchButton.onclick = () => setTheme(!isDark());;
-setTheme(false);
+const isDarkModePreferred = () => 
+  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+themeSwitchButton.onclick = () => setTheme(!isDark());
+setTheme(isDarkModePreferred());
