@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://anno008.github.io/CV/sitemap.xml
