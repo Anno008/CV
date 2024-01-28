@@ -1,25 +1,17 @@
-const themeSwitchButton = document.getElementById("themeSwitch");
-const lightSvg = document.getElementsByClassName("sun")[0];
-const darkSvg = document.getElementsByClassName("moon")[0]
+const themeSwitchButton = document.querySelector("#themeSwitch");
+const lightSvg = document.querySelector(".sun");
+const darkSvg = document.querySelector(".moon");
 
-const isDark = () => document.getElementsByClassName("dark").length > 0;
+const isDark = () => document.body.classList.contains("dark");
+
+const isDarkModePreferred = () =>
+  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 const setTheme = (isDarkTheme) => {
-  const body = document.body;
-
-  if (isDarkTheme) {
-    body.classList.add("dark");
-    lightSvg.style.display = "block";
-    darkSvg.style.display = "none";
-  } else {
-    body.classList.remove("dark");
-    lightSvg.style.display = "none";
-    darkSvg.style.display = "block";
-  }
+  document.body.classList.toggle("dark", isDarkTheme);
+  lightSvg.style.display = isDarkTheme ? "block" : "none";
+  darkSvg.style.display = isDarkTheme ? "none" : "block";
 };
-
-const isDarkModePreferred = () => 
-  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 themeSwitchButton.onclick = () => setTheme(!isDark());
 setTheme(isDarkModePreferred());
