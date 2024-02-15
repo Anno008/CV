@@ -96,11 +96,16 @@ h3 {
   user-select: none;
 }
 
-.themeSwitch {
+.actionsContainer { 
   margin: 12px;
   position: fixed;
+  display: flex;
+  gap: 10px;
   top: 0;
   right: 0;
+}
+
+.actionButton {
   height: auto;
   width: auto;
   border: none;
@@ -119,12 +124,18 @@ h3 {
   user-select: none;
 }
 
-.themeSwitch:hover {
+.actionButton:hover {
   transform: scale(1.2) rotate(360deg);
 }
 
 @media only screen and (max-width: 1024px) {
   .container {
     width: 100%;
+  }
+}
+
+@media print {
+  @page {
+    margin: 15px;
   }
 }

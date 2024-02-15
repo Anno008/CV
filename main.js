@@ -1,4 +1,6 @@
-const themeSwitchButton = document.querySelector("#themeSwitch");
+const themeSwitchButton = document.querySelector("#themeSwitchButton");
+const pdfDownloadButton = document.querySelector("#pdfDownloadButton");
+
 const lightSvg = document.querySelector(".sun");
 const darkSvg = document.querySelector(".moon");
 
@@ -13,5 +15,27 @@ const setTheme = (isDarkTheme) => {
   darkSvg.style.display = isDarkTheme ? "none" : "block";
 };
 
+const downloadPdf = () => {
+  const source = window.document.getElementsByClassName("container")[0];
+  const content = source.innerHTML;
+
+  const printWindow = window.open();
+  printWindow.document.write(`
+    <html>
+      <head>
+        <title>Aleksa Jovicic CV</title>
+        <link rel="stylesheet" href="./main.css" />
+      </head>
+      <body>
+        ${content}
+      </body>
+    </html>
+  `);
+  printWindow.document.close();
+  printWindow.print();
+}
+
 themeSwitchButton.onclick = () => setTheme(!isDark());
+pdfDownloadButton.onclick = () => downloadPdf()
+
 setTheme(isDarkModePreferred());
