@@ -25,6 +25,14 @@ const downloadPdf = () => {
       <head>
         <title>Aleksa Jovicic CV</title>
         <link rel="stylesheet" href="./main.css" />
+        <style>
+          html {
+            margin: 10px;
+          }
+          html, body {
+            background-color: var(--secondaryBackgroundColor);
+          }
+        </style>
       </head>
       <body>
         ${content}
