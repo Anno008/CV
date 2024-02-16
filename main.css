@@ -44,14 +44,11 @@ body {
   color: var(--primaryTextColor);
 }
 
-ul > li {
-  list-style: circle;
-}
-
 ul {
   margin-block-start: 4px;
   margin-block-end: 4px;
   padding-inline-start: 30px;
+  list-style: circle;
 }
 
 h1 {
@@ -73,7 +70,7 @@ h3 {
 .container {
   box-shadow: 0 0px 4px 1px var(--shadowColor);
   width: 70%;
-  margin: auto auto;
+  margin: auto;
   background-color: var(--secondaryBackgroundColor);
   box-sizing: border-box;
   padding: 20px;
@@ -86,13 +83,13 @@ h3 {
 }
 
 .section {
-  margin: 10px 10px;
+  margin: 10px;
 }
 
 .moon,
 .sun {
   display: none;
-  margin: auto auto;
+  margin: auto;
   user-select: none;
 }
 
@@ -106,20 +103,16 @@ h3 {
 }
 
 .actionButton {
-  height: auto;
-  width: auto;
-  border: none;
-  background: none;
-  color: inherit;
-  border-radius: 50%;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
   height: 35px;
   width: 35px;
   border: 1px solid var(--primaryTextColor);
   border-radius: 50%;
+  background: none;
+  color: inherit;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
   transition: all 0.3s ease-in;
   user-select: none;
 }
